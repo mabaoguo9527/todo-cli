@@ -16,11 +16,11 @@
 ### 全局安装（推荐）
 
 ```bash
-npm install -g todo-cli
+npm install -g @mabaoguo/todo-cli
 # 或
-pnpm add -g todo-cli
+pnpm add -g @mabaoguo/todo-cli
 # 或
-yarn global add todo-cli
+yarn global add @mabaoguo/todo-cli
 ```
 
 ### 本地开发安装

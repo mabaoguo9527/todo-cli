@@ -1,5 +1,5 @@
 {
-  "name": "todo-cli",
+  "name": "@mabaoguo/todo-cli",
   "version": "1.0.0",
   "description": "A terminal TODO task manager CLI tool",
   "type": "module",
@@ -14,8 +14,16 @@
     "typecheck": "tsc --noEmit"
   },
   "keywords": ["cli", "todo", "task", "terminal"],
-  "author": "",
+  "author": "mabaoguo",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mabaoguo/todo-cli.git"
+  },
+  "homepage": "https://github.com/mabaoguo/todo-cli#readme",
+  "bugs": {
+    "url": "https://github.com/mabaoguo/todo-cli/issues"
+  },
   "packageManager": "pnpm@10.28.2",
   "engines": {
     "node": ">=18.0.0"
