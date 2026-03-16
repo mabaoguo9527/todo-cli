@@ -1,0 +1,22 @@
+# 源代码文件（用户不需要）
+src/
+*.ts
+
+# 构建配置文件
+tsconfig.json
+tsdown.config.ts
+
+# 开发相关文件
+.gitignore
+.idea/
+
+# 包管理器文件
+pnpm-lock.yaml
+
+# 测试和开发文件
+*.test.ts
+*.spec.ts
+
+# 文档和示例（如果需要可以保留，但这里我们已经在 README 中包含了）
+# examples/
+# docs/
