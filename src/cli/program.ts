@@ -8,6 +8,7 @@
  */
 
 import { Command } from "commander";
+import chalk from "chalk";
 import { registerAddCommand } from "./commands/add.js";
 import { registerListCommand } from "./commands/list.js";
 import { registerDoneCommand } from "./commands/done.js";
@@ -19,8 +20,23 @@ function buildProgram(): Command {
 
   program
     .name("todo")
-    .description("📝 一个终端 TODO 任务管理器")
-    .version("1.0.0", "-v, --version", "显示版本号");
+    .description(chalk.hex('#1E90FF').bold("📝 一个终端 TODO 任务管理器"))
+    .version("1.0.1", "-v, --version", chalk.hex('#4169E1')("显示版本号"))
+    .configureHelp({
+      subcommandTerm: (cmd) => chalk.hex('#1E90FF').bold(cmd.name()),
+      commandUsage: (cmd) => chalk.hex('#00C851')(cmd.usage()),
+      optionTerm: (option) => chalk.hex('#4ECDC4')(option.flags),
+      argumentTerm: (arg) => chalk.hex('#95E1D3')(`<${arg.name}>`),
+    })
+    .addHelpText('after', chalk.hex('#708090')(`
+示例:
+  ${chalk.hex('#1E90FF').bold('todo add')} "学习 TypeScript" --priority high
+  ${chalk.hex('#1E90FF').bold('todo list')} --all
+  ${chalk.hex('#1E90FF').bold('todo done')} 1
+  ${chalk.hex('#1E90FF').bold('todo remove')} 2
+
+更多帮助请访问: ${chalk.hex('#1E90FF').underline('https://github.com/mabaoguo9527/todo-cli')}
+    `));
 
   // 注册所有子命令
   registerAddCommand(program);

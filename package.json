@@ -1,6 +1,6 @@
 {
   "name": "@mabaoguo/todo-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A terminal TODO task manager CLI tool",
   "type": "module",
   "main": "dist/entry.js",
